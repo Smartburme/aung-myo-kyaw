@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burme Chat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav>
+      <button onclick="showSection('friends')">Find Friends</button>
+      <button onclick="showSection('chat')">Chat</button>
+      <button onclick="showSection('group')">Group Chat</button>
+      <button onclick="showSection('settings')">Settings</button>
+    </nav>
+
+    <!-- Friends Section -->
+    <section id="friends" class="section">
+      <h2>Find Friends Nearby</h2>
+      <button onclick="getLocation()">Get My Location</button>
+      <div id="map">Map placeholder (use Mapbox/Google Maps API)</div>
+      <ul id="nearby-users"></ul>
+    </section>
+
+    <!-- Chat Section -->
+    <section id="chat" class="section" style="display: none;">
+      <h2>Chat</h2>
+      <input id="recipient-id" placeholder="Recipient User ID">
+      <div id="chat-messages"></div>
+      <input id="chat-input" placeholder="Type a message...">
+      <button onclick="toggleEmojiPicker()">😊</button>
+      <input type="file" id="photo-upload" accept="image/*">
+      <button onclick="sendMessage()">Send</button>
+      <div id="emoji-picker" style="display: none;">
+        <!-- Emoji buttons (simplified) -->
+        <button onclick="addEmoji('😊')">😊</button>
+        <button onclick="addEmoji('❤️')">❤️</button>
+        <button onclick="addEmoji('👍')">👍</button>
+      </div>
+    </section>
+
+    <!-- Group Chat Section -->
+    <section id="group" class="section" style="display: none;">
+      <h2>Group Chat</h2>
+      <input id="group-id" placeholder="Group ID">
+      <button onclick="joinGroup()">Join Group</button>
+      <div id="group-messages"></div>
+      <input id="group-input" placeholder="Type a group message...">
+      <button onclick="sendGroupMessage()">Send</button>
+      <button onclick="banUser()">Ban User (Admin)</button>
+      <input id="ban-user-id" placeholder="User ID to ban">
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings" class="section" style="display: none;">
+      <h2>Settings</h2>
+      <label>
+        <input type="checkbox" id="dark-mode" onclick="toggleDarkMode()">
+        Dark Mode
+      </label>
+      <h3>About</h3>
+      <p>Burme Chat: Connect with friends and meet new people!</p>
+      <label>
+        <input type="checkbox" id="location-sharing">
+        Enable Location Sharing
+      </label>
+    </section>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
