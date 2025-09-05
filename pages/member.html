@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aung Myo Kyaw - Member Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-user"></i>
+                    <span>Aung Myo Kyaw</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="chat-bot.html">Chat Bot</a></li>
+                    <li><a href="member.html" class="active">Member Chat</a></li>
+                    <li><a href="e-commerce.html">E-Commerce</a></li>
+                    <li><a href="home.html#about">About</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Member Chat Section -->
+    <section id="member-chat">
+        <div class="container">
+            <h2 class="section-title">Member Chat Group</h2>
+            
+            <div class="chat-layout">
+                <!-- Sidebar with members -->
+                <div class="chat-sidebar">
+                    <div class="sidebar-header">
+                        <h3>Members (4)</h3>
+                        <button class="btn btn-primary" id="add-member">Add Member</button>
+                    </div>
+                    <div class="member-list">
+                        <div class="member-item online">
+                            <div class="member-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="member-info">
+                                <h4>User One</h4>
+                                <p>Online</p>
+                            </div>
+                        </div>
+                        <div class="member-item online">
+                            <div class="member-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="member-info">
+                                <h4>User Two</h4>
+                                <p>Online</p>
+                            </div>
+                        </div>
+                        <div class="member-item away">
+                            <div class="member-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="member-info">
+                                <h4>User Three</h4>
+                                <p>Away</p>
+                            </div>
+                        </div>
+                        <div class="member-item offline">
+                            <div class="member-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="member-info">
+                                <h4>User Four</h4>
+                                <p>Offline</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main chat area -->
+                <div class="chat-main">
+                    <div class="chat-header">
+                        <h3>Group Chat</h3>
+                        <div class="chat-actions">
+                            <button class="btn btn-icon"><i class="fas fa-video"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-phone"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="group-chat-messages">
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-sender">User One</div>
+                                <p>Hello everyone! How's it going?</p>
+                                <span class="message-time">10:00 AM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-sender">User Two</div>
+                                <p>Great! Just working on the new project.</p>
+                                <span class="message-time">10:02 AM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message sent">
+                            <div class="message-content">
+                                <p>I just finished my part of the project. Should I upload it?</p>
+                                <span class="message-time">10:05 AM</span>
+                            </div>
+                            <div class="message-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <div class="input-actions">
+                            <button class="btn btn-icon"><i class="fas fa-paperclip"></i></button>
+                            <button class="btn btn-icon"><i class="fas fa-image"></i></button>
+                        </div>
+                        <input type="text" id="group-chat-input" placeholder="Type a message...">
+                        <button id="send-group-message" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Website</h3>
+                    <p>This personal website showcases projects and services offered by Aung Myo Kyaw.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> contact@aungmyokyaw.com</p>
+                    <p><i class="fas fa-phone"></i> +95 9xxxxxxxx</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Yangon, Myanmar</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Aung Myo Kyaw. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/member.js"></script>
+</body>
+  </html>
