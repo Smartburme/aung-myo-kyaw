@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aung Myo Kyaw - Chat Bot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-user"></i>
+                    <span>Aung Myo Kyaw</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="chat-bot.html" class="active">Chat Bot</a></li>
+                    <li><a href="member.html">Member Chat</a></li>
+                    <li><a href="e-commerce.html">E-Commerce</a></li>
+                    <li><a href="home.html#about">About</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Chat Bot Section -->
+    <section id="chat-bot">
+        <div class="container">
+            <h2 class="section-title">Chat Bot</h2>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h3><i class="fas fa-robot"></i> My Assistant Bot</h3>
+                    <div class="chat-status">Online</div>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! How can I help you today?</p>
+                            <span class="message-time">10:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input" placeholder="Type your message here...">
+                    <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+            <div class="chat-suggestions">
+                <h3>Quick Questions</h3>
+                <div class="suggestion-buttons">
+                    <button class="suggestion-btn" data-question="What services do you offer?">Services</button>
+                    <button class="suggestion-btn" data-question="How can I contact you?">Contact</button>
+                    <button class="suggestion-btn" data-question="Tell me about your e-commerce">E-Commerce</button>
+                    <button class="suggestion-btn" data-question="How does the member chat work?">Member Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Website</h3>
+                    <p>This personal website showcases projects and services offered by Aung Myo Kyaw.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> contact@aungmyokyaw.com</p>
+                    <p><i class="fas fa-phone"></i> +95 9xxxxxxxx</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Yangon, Myanmar</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Aung Myo Kyaw. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/chat-bot.js"></script>
+</body>
+                                      </html>
